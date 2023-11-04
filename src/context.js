@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import axios from "axios";
 
 const table = {
   sports: 21,
@@ -6,7 +7,8 @@ const table = {
   politics: 24,
 };
 
-const API_ENDPOINT = "https://opentdb.com/api.php?";
+// const API_ENDPOINT = "https://opentdb.com/api.php?";
+
 
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
@@ -22,13 +24,22 @@ const AppProvider = ({ children }) => {
     difficulty: "easy",
   });
   const [isModalOpen, setModalOpen] = useState(false);
-  const fetchQuestions = async (url) => {
+  const fetchQuestions = async () => {
+    const apiKey = '6QB98ZWk2B682Y1wqntPGJNS1fSb7x457ByvjodV';
+    
+const url = 'https://quizapi.io/api/v1/questions';
     setLoading(true);
     setWaiting(false);
-    const response = await axios(url).catch((err) => console.log("error api"));
+    const response = await axios(url,{params:{
+        apiKey:apiKey,
+        limit:10,
+        category:"linux",
+        difficulty:"easy"
+    }}).catch((err) => console.log(err));
     if (response) {
-      const data = response.data.results;
-      if (data.length > 0) {
+      const data = response.data;
+    console.log(response);
+      if (data) {
         setQuestions(data);
         setWaiting(false);
         setLoading(false);
@@ -39,7 +50,7 @@ const AppProvider = ({ children }) => {
       }
     } else {
       setWaiting(true);
-    }
+     }
   };
   const nextQuestion = () => {
     setIndex((oldIndex) => {
@@ -57,7 +68,7 @@ const AppProvider = ({ children }) => {
 
   }
 
-  const checkAnswer = ()=> {
+  const checkAnswer = (value)=> {
     if(value) {
         setCorrect((oldState)=>oldState+1);
 
@@ -70,12 +81,12 @@ const AppProvider = ({ children }) => {
     const {name,value}=e.target;
     setQuiz({...quiz, [name] : value});
   };
-  const handleSubmit =(e)=> {
-    e.preventDefult();
-    const {amount,category,difficulty}=quiz;
-    const url=` ${API_ENDPOINT}amount=${amount}&category=${table[category]}&difficulty=${difficulty}&type=multiple`;
-    fetch(url)
-  }
+//   const handleSubmit =(e)=> {
+//     e.preventDefult();
+//     const {amount,category,difficulty}=quiz;
+//     const url=` ${API_ENDPOINT}amount=${amount}&category=${table[category]}&difficulty=${difficulty}&type=multiple`;
+//     fetch(url)
+//   }
 
   return (
     <AppContext.Provider value={{
@@ -89,7 +100,8 @@ const AppProvider = ({ children }) => {
         checkAnswer,
         quiz,
         handleChange,
-        handleSubmit
+        // handleSubmit,
+        fetchQuestions
 
     }}
     >
