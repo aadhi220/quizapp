@@ -1,0 +1,1175 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is React?",
+        "options": [
+          "A JavaScript framework",
+          "A programming language",
+          "A design pattern",
+          "A database system"
+        ],
+        "category": "React",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 2,
+        "question": "What is the virtual DOM in React used for?",
+        "options": [
+          "It's a feature for creating real 3D objects.",
+          "It's a lightweight copy of the actual DOM used for performance optimization.",
+          "It's a JavaScript library for building user interfaces.",
+          "It's a component used for creating forms."
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 3,
+        "question": "Which lifecycle method is invoked after a component is inserted into the DOM?",
+        "options": [
+          "componentWillUnmount",
+          "componentDidMount",
+          "componentWillUpdate",
+          "componentDidUpdate"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 4,
+        "question": "What is JSX in React?",
+        "options": [
+          "A JavaScript file extension",
+          "A syntactic extension for JavaScript recommended by React",
+          "A build tool for React applications",
+          "A data fetching library for React"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 5,
+        "question": "What are React props used for?",
+        "options": [
+          "Defining CSS styles",
+          "Passing data from parent to child components",
+          "Handling user input",
+          "Creating event listeners"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 6,
+        "question": "What is the primary purpose of a React component's render() method?",
+        "options": [
+          "To define the component's state",
+          "To handle user interactions",
+          "To define the component's structure and UI",
+          "To perform asynchronous operations"
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 7,
+        "question": "What is the core concept behind React's one-way data flow?",
+        "options": [
+          "Data flows in both directions between parent and child components",
+          "Data flows only from parent to child components",
+          "Data flows only from child to parent components",
+          "Data flows in all directions within the component tree"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 8,
+        "question": "Which React hook is used to manage component state?",
+        "options": [
+          "useState",
+          "useEffect",
+          "useContext",
+          "useRef"
+        ],
+        "category": "React",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 9,
+        "question": "What does React Router provide for building single-page applications?",
+        "options": [
+          "Server-side rendering",
+          "Client-side routing",
+          "State management",
+          "Database connectivity"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 10,
+        "question": "Which component lifecycle method is used to update the component when new props are received?",
+        "options": [
+          "componentDidUpdate",
+          "componentDidMount",
+          "componentWillUnmount",
+          "componentWillReceiveProps"
+        ],
+        "category": "React",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 11,
+        "question": "What is the purpose of React Router?",
+        "options": [
+          "To manage component state",
+          "To create reusable components",
+          "To handle client-side routing in a React application",
+          "To manage API requests"
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 12,
+        "question": "What is a Higher Order Component (HOC) in React?",
+        "options": [
+          "A component that renders higher in the component tree",
+          "A function that takes a component and returns a new component with enhanced functionality",
+          "A component with complex logic that should be avoided",
+          "A component that is used for state management"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 13,
+        "question": "What is Redux in the context of React?",
+        "options": [
+          "A built-in React state management solution",
+          "A library for managing application state and global data flow",
+          "A tool for styling React components",
+          "A React component for routing"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 14,
+        "question": "What is the purpose of React context?",
+        "options": [
+          "To handle client-side routing",
+          "To pass data through the component tree without having to pass props manually at every level",
+          "To manage component state",
+          "To create reusable components"
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 15,
+        "question": "What is the key advantage of using React's PureComponent over a regular component?",
+        "options": [
+          "PureComponent has better performance due to shallow comparison of props and state.",
+          "PureComponent supports inline styling.",
+          "PureComponent can access the DOM directly.",
+          "There is no difference between a PureComponent and a regular component."
+        ],
+        "category": "React",
+        "correctAnswer": 0,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 16,
+        "question": "What is server-side rendering (SSR) in React?",
+        "options": [
+          "Rendering a React component on the server side before sending it to the client",
+          "Rendering a component using only server resources",
+          "Rendering a component on the client side first and then on the server side",
+          "Rendering a component on multiple servers simultaneously"
+        ],
+        "category": "React",
+        "correctAnswer": 0,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 17,
+        "question": "What are React hooks, and why were they introduced?",
+        "options": [
+          "Hooks are components in React.",
+          "Hooks are functions that let you use state and other React features in functional components.",
+          "Hooks are used for defining routing in React.",
+          "Hooks are introduced to make class components obsolete."
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 18,
+        "question": "What is the purpose of the `useEffect` hook in React?",
+        "options": [
+          "To render components with a loading indicator",
+          "To create animations in React components",
+          "To perform side effects in function components",
+          "To define component state"
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 19,
+        "question": "What is the key difference between React's functional components and class components?",
+        "options": [
+          "Functional components use a `render` method, while class components use functions.",
+          "Functional components are written in Python, while class components are written in JavaScript.",
+          "Functional components use the `function` keyword, while class components use the `class` keyword.",
+          "There is no key difference; they serve the same purpose."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 20,
+        "question": "What is JSX and how is it different from HTML?",
+        "options": [
+          "JSX is a JavaScript framework for building user interfaces.",
+          "JSX is a lightweight extension for HTML that is used in React to describe what the UI should look like.",
+          "JSX is a CSS preprocessor for styling React components.",
+          "JSX is a data management library for React."
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 21,
+        "question": "Explain the concept of reconciliation in React's virtual DOM.",
+        "options": [
+          "Reconciliation is the process of creating a virtual DOM tree from the actual DOM elements.",
+          "Reconciliation is the process of updating the virtual DOM based on changes in the actual DOM.",
+          "Reconciliation is a technique for optimizing the rendering of components in React.",
+          "Reconciliation is a process for handling user authentication in React applications."
+        ],
+        "category": "React",
+        "correctAnswer": 1,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 22,
+        "question": "What is the significance of the 'key' prop when rendering lists of components in React?",
+        "options": [
+          "The 'key' prop is used for applying unique styles to list items.",
+          "The 'key' prop is used to specify the position of each list item in the DOM.",
+          "The 'key' prop is used to help React identify which items have changed, are added, or removed in a list.",
+          "The 'key' prop is used to define a component's unique identifier."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 23,
+        "question": "What are React hooks, and how do they impact the way state is managed in functional components?",
+        "options": [
+          "React hooks are used for managing browser history in React applications.",
+          "React hooks are a way to add lifecycle methods to functional components.",
+          "React hooks allow functional components to manage component state, side effects, and more, making them equivalent to class components in terms of capabilities.",
+          "React hooks are a replacement for Redux in state management."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 24,
+        "question": "Explain the differences between client-side routing and server-side routing in React. When would you use one over the other?",
+        "options": [
+          "Client-side routing is better for SEO, while server-side routing provides better performance.",
+          "Client-side routing is faster and more user-friendly, while server-side routing is more secure.",
+          "Client-side routing updates the page without a full reload, while server-side routing requires a full page reload.",
+          "Client-side routing is suitable for static websites, while server-side routing is for dynamic web applications."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 25,
+        "question": "Explain the concept of 'reducer' in the context of state management using React and Redux.",
+        "options": [
+          "A reducer is a function that changes the state directly in Redux.",
+          "A reducer is a utility for executing side effects in Redux.",
+          "A reducer is a function that calculates the new state based on the previous state and an action, without modifying the previous state directly.",
+          "A reducer is a way to handle asynchronous operations in Redux."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 26,
+        "question": "What is the difference between controlled and uncontrolled components in React forms?",
+        "options": [
+          "Controlled components are more performant than uncontrolled components.",
+          "Controlled components are not used for form elements.",
+          "Controlled components store form data in the component's state and are controlled by React, while uncontrolled components do not.",
+          "Uncontrolled components are considered best practice for form handling in React."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 27,
+        "question": "Explain the purpose of React Fragments. When and why would you use them?",
+        "options": [
+          "React Fragments are used for creating animations in React applications.",
+          "React Fragments are a way to hide components from the virtual DOM.",
+          "React Fragments are used to group multiple children elements without adding extra nodes to the DOM.",
+          "React Fragments are used to improve performance in server-side rendering."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 28,
+        "question": "What is the significance of the 'shouldComponentUpdate' lifecycle method in React, and how can it be used to optimize rendering?",
+        "options": [
+          "The 'shouldComponentUpdate' method is used for handling component initialization.",
+          "The 'shouldComponentUpdate' method is used for server-side rendering.",
+          "The 'shouldComponentUpdate' method allows you to control whether or not a component should re-render based on the changes in its props and state, optimizing rendering performance.",
+          "The 'shouldComponentUpdate' method is no longer used in modern React."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 29,
+        "question": "Explain the concept of 'context' in React and when it is appropriate to use it for state management.",
+        "options": [
+          "Context is a way to pass data through the component tree without the need for props drilling and is used for all state management in React.",
+          "Context is only used for handling server-side rendering in React.",
+          "Context is not a recommended approach for state management in React.",
+          "Context is used for managing form data in React applications."
+        ],
+        "category": "React",
+        "correctAnswer": 0,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 30,
+        "question": "What is the purpose of the React DevTools extension, and how can it help in React development?",
+        "options": [
+          "React DevTools is used for creating UI components in React.",
+          "React DevTools is used for server-side rendering.",
+          "React DevTools is a browser extension that allows developers to inspect, debug, and profile React components in the browser, helping identify performance issues and component hierarchy.",
+          "React DevTools is used for managing component state in React."
+        ],
+        "category": "React",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 31,
+        "question": "What does HTML stand for?",
+        "options": [
+          "Hypertext Transfer Language",
+          "Hyperlink and Text Markup Language",
+          "Highly Technical Modern Language",
+          "Home Tool Markup Language"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 32,
+        "question": "Which HTML tag is used for creating a hyperlink?",
+        "options": [
+          "<a>",
+          "<link>",
+          "<h1>",
+          "<p>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 33,
+        "question": "What is the basic structure of an HTML document?",
+        "options": [
+          "<head> and <footer>",
+          "<header> and <nav>",
+          "<html>, <head>, and <body>",
+          "<title> and <section>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 34,
+        "question": "Which HTML tag is used to create a list with bullet points?",
+        "options": [
+          "<ol>",
+          "<ul>",
+          "<li>",
+          "<dl>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 35,
+        "question": "What is the HTML tag for creating a line break?",
+        "options": [
+          "<br>",
+          "<lb>",
+          "<break>",
+          "<newline>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 36,
+        "question": "Which HTML tag is used for defining the structure of an HTML document, such as headings and paragraphs?",
+        "options": [
+          "<div>",
+          "<span>",
+          "<body>",
+          "<section>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 37,
+        "question": "What is the HTML tag for creating a hyperlink with a specific target, such as opening a link in a new tab?",
+        "options": [
+          "<a href='url' target='_blank'>",
+          "<a target='_new'>",
+          "<link target='_blank'>",
+          "<a href='url' newtab>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 38,
+        "question": "Which HTML tag is used to display a horizontal line or a thematic break in an HTML document?",
+        "options": [
+          "<hr>",
+          "<line>",
+          "<br>",
+          "<divider>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 39,
+        "question": "What does the HTML tag <img> stand for?",
+        "options": [
+          "Image",
+          "Link",
+          "Text",
+          "Table"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 40,
+        "question": "Which HTML tag is used for creating a numbered list?",
+        "options": [
+          "<ol>",
+          "<ul>",
+          "<li>",
+          "<dl>"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 41,
+        "question": "What does HTML stand for?",
+        "options": [
+          "Hyper Text Markup Language",
+          "Highly Technical Markup Language",
+          "Hyperlink and Text Markup Language",
+          "High-Level Text Markup Language"
+        ],
+        "category": "HTML",
+        "correctAnswer": 0,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 42,
+        "question": "What is the purpose of the HTML <head> element, and what kind of information is typically included in it?",
+        "options": [
+          "The <head> element is used to define character encoding in HTML.",
+          "The <head> element contains the visible content of a web page.",
+          "The <head> element is used to define the structure and layout of the page.",
+          "The <head> element contains metadata about the document, such as the page title, character encoding, and linked stylesheets."
+        ],
+        "category": "HTML",
+        "correctAnswer": 3,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 43,
+        "question": "What does the HTML <a> element stand for, and how is it used in web development?",
+        "options": [
+          "The <a> element is used to define character encoding in HTML.",
+          "The <a> element represents an anchor or a hyperlink, used to create links to other web pages, resources, or locations within the same page.",
+          "The <a> element is used for creating animations in web development.",
+          "The <a> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 44,
+        "question": "Explain the role of the HTML <img> element in web development, and how is it used to display images on a web page?",
+        "options": [
+          "The <img> element is used for defining character encoding in HTML.",
+          "The <img> element is used to create animations in web development.",
+          "The <img> element is used to display images on a web page by specifying the image source (URL) and alternative text.",
+          "The <img> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 45,
+        "question": "What is the purpose of the HTML <table> element, and how is it used to create tabular data on a web page?",
+        "options": [
+          "The <table> element is used for creating animations in web development.",
+          "The <table> element is used to define character encoding in HTML.",
+          "The <table> element is used to create tabular data on a web page, with rows, columns, and cells, using elements like <tr>, <th>, and <td>.",
+          "The <table> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 46,
+        "question": "What is the HTML <form> element used for, and how is it employed to collect user input on a web page?",
+        "options": [
+          "The <form> element is used to define character encoding in HTML.",
+          "The <form> element is used for creating animations in web development.",
+          "The <form> element is used to create interactive forms on web pages, allowing users to input data, which can be submitted to a server for processing.",
+          "The <form> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 47,
+        "question": "Explain the role of the HTML <input> element, and how is it used to collect various types of user input?",
+        "options": [
+          "The <input> element is used to define character encoding in HTML.",
+          "The <input> element is used for creating animations in web development.",
+          "The <input> element is used to create interactive form fields that can collect various types of user input, such as text, numbers, dates, and more.",
+          "The <input> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 48,
+        "question": "What is the HTML <video> element used for, and how is it employed to embed video content in a web page?",
+        "options": [
+          "The <video> element is used to define character encoding in HTML.",
+          "The <video> element is used for creating animations in web development.",
+          "The <video> element is used to embed video content in a web page by specifying the video source (URL) and providing controls for playback.",
+          "The <video> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 49,
+        "question": "Explain the purpose of the HTML <audio> element, and how is it used to embed audio content in a web page?",
+        "options": [
+          "The <audio> element is used to define character encoding in HTML.",
+          "The <audio> element is used for creating animations in web development.",
+          "The <audio> element is used to embed audio content in a web page by specifying the audio source (URL) and providing controls for playback.",
+          "The <audio> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 50,
+        "question": "What does the HTML <iframe> element stand for, and how is it used to embed external content within a web page?",
+        "options": [
+          "The <iframe> element is used to define character encoding in HTML.",
+          "The <iframe> element is used for creating animations in web development.",
+          "The <iframe> element is used to embed external content, such as web pages or multimedia, within a web page by specifying the source URL.",
+          "The <iframe> element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 51,
+        "question": "Explain the differences between HTML and HTML5, and highlight some of the new features introduced in HTML5.",
+        "options": [
+          "HTML5 is a newer version of HTML that has better support for Internet Explorer 6.",
+          "HTML5 is a completely different markup language from HTML.",
+          "HTML5 is the latest version of HTML and introduced new features like semantic elements, audio and video support, local storage, and improved form controls.",
+          "HTML5 is an older version of HTML with fewer features."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 52,
+        "question": "What are WebSockets, and how are they used in web development to enable real-time communication?",
+        "options": [
+          "WebSockets are used for creating animations in web development.",
+          "WebSockets are a type of HTML tag used for styling web pages.",
+          "WebSockets are a protocol that enables full-duplex, bidirectional communication between a client and a server, allowing real-time data transfer.",
+          "WebSockets are used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 53,
+        "question": "What is the purpose of the HTML `<canvas>` element, and how is it used for drawing graphics in web development?",
+        "options": [
+          "The `<canvas>` element is used for creating dropdown menus in web development.",
+          "The `<canvas>` element is used for defining character encoding in HTML.",
+          "The `<canvas>` element is used for rendering graphics, animations, and interactive content using JavaScript.",
+          "The `<canvas>` element is used for creating tables in web development."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 54,
+        "question": "What is the HTML5 Geolocation API, and how is it used to access a user's location in a web application?",
+        "options": [
+          "The HTML5 Geolocation API is used for creating animations in web development.",
+          "The HTML5 Geolocation API is used to access a user's location information using GPS technology.",
+          "The HTML5 Geolocation API is used for defining character encoding in HTML.",
+          "The HTML5 Geolocation API is used for defining font styles."
+        ],
+        "category": "HTML",
+        "correctAnswer": 1,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 55,
+        "question": "Explain the purpose of the HTML5 Web Storage API, and differentiate between localStorage and sessionStorage.",
+        "options": [
+          "The HTML5 Web Storage API is used for creating animations in web development.",
+          "The HTML5 Web Storage API is used for defining character encoding in HTML.",
+          "The HTML5 Web Storage API is used for client-side storage of data, offering two mechanisms: localStorage and sessionStorage. localStorage persists data beyond the current session, while sessionStorage stores data only for the current session.",
+          "The HTML5 Web Storage API is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 56,
+        "question": "What is the purpose of the HTML `<details>` and `<summary>` elements, and how are they used to create collapsible content sections?",
+        "options": [
+          "The `<details>` and `<summary>` elements are used for creating dropdown menus in web development.",
+          "The `<details>` and `<summary>` elements are used to define character encoding in HTML.",
+          "The `<details>` element is used to create a disclosure widget for hiding or showing content, and the `<summary>` element provides a summary or label for the details section.",
+          "The `<details>` and `<summary>` elements are used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 57,
+        "question": "What are HTML microdata and the `<time>` element used for, and how do they improve the structure and semantics of web content?",
+        "options": [
+          "HTML microdata and the `<time>` element are used for creating animations in web development.",
+          "HTML microdata and the `<time>` element are used for defining character encoding in HTML.",
+          "HTML microdata is a way to embed machine-readable data into HTML documents, and the `<time>` element is used to represent dates and times. They improve the structure and semantics of web content by providing context to data elements.",
+          "HTML microdata and the `<time>` element are used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 58,
+        "question": "What is the HTML5 `<figure>` and `<figcaption>` elements used for, and how are they employed to enhance document structure?",
+        "options": [
+          "The `<figure>` and `<figcaption>` elements are used for creating dropdown menus in web development.",
+          "The `<figure>` and `<figcaption>` elements are used to define character encoding in HTML.",
+          "The `<figure>` element is used to group media content, such as images, while the `<figcaption>` element provides a caption or description for the grouped content. They enhance document structure and accessibility.",
+          "The `<figure>` and `<figcaption>` elements are used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 59,
+        "question": "What are HTML Web Components, and how do they facilitate the creation of reusable, encapsulated components in web development?",
+        "options": [
+          "HTML Web Components are used for creating animations in web development.",
+          "HTML Web Components are a way to define character encoding in HTML.",
+          "HTML Web Components are a set of standards that allow developers to create reusable, encapsulated components with custom tags and scripts, improving modularity and reusability in web development.",
+          "HTML Web Components are used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 60,
+        "question": "Explain the use of the HTML `<math>` element and MathML in web development for displaying mathematical notations and equations.",
+        "options": [
+          "The `<math>` element is used for creating dropdown menus in web development.",
+          "The `<math>` element is used to define character encoding in HTML.",
+          "The `<math>` element is used in conjunction with MathML (Mathematical Markup Language) to display mathematical notations and equations on web pages, making it easier to present complex mathematical content.",
+          "The `<math>` element is used for defining font styles in HTML documents."
+        ],
+        "category": "HTML",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 61,
+        "question": "What does CSS stand for?",
+        "options": [
+          "Cascading Style Sheet",
+          "Computer Style Sheet",
+          "Colorful Style Sheet",
+          "Creative Style Sheet"
+        ],
+        "category": "CSS",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 62,
+        "question": "How can you include an external CSS file in an HTML document?",
+        "options": [
+          "Using the `<script>` element",
+          "Using the `<link>` element with a 'rel' attribute set to 'stylesheet'",
+          "Using the `<style>` element",
+          "By embedding CSS directly in the HTML file"
+        ],
+        "category": "CSS",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 63,
+        "question": "What is the selector in CSS used to target all elements of a specific type?",
+        "options": [
+          "Class selector",
+          "ID selector",
+          "Element selector",
+          "Attribute selector"
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 64,
+        "question": "How can you change the text color of an HTML element using CSS?",
+        "options": [
+          "Using the `text-color` property",
+          "Using the `color` property",
+          "Using the `font-color` property",
+          "Using the `text-style` property"
+        ],
+        "category": "CSS",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 65,
+        "question": "What does the CSS property 'font-size' control?",
+        "options": [
+          "Text alignment",
+          "Background color",
+          "Font size",
+          "Border thickness"
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 66,
+        "question": "Which CSS property is used to set the background color of an element?",
+        "options": [
+          "background-color",
+          "color",
+          "border-color",
+          "text-color"
+        ],
+        "category": "CSS",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 67,
+        "question": "What is the CSS 'margin' property used for?",
+        "options": [
+          "Setting the space between the border and content of an element",
+          "Changing the text color of an element",
+          "Creating rounded corners for elements",
+          "Setting the font size"
+        ],
+        "category": "CSS",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 68,
+        "question": "What is the purpose of the CSS 'padding' property?",
+        "options": [
+          "Setting the space between the border and content of an element",
+          "Changing the background color of an element",
+          "Creating rounded corners for elements",
+          "Setting the font size"
+        ],
+        "category": "CSS",
+        "correctAnswer": 0,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 69,
+        "question": "What is the CSS 'border' property used for?",
+        "options": [
+          "Setting the space between the border and content of an element",
+          "Changing the text color of an element",
+          "Creating rounded corners for elements",
+          "Defining the border style, color, and width of an element"
+        ],
+        "category": "CSS",
+        "correctAnswer": 3,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 70,
+        "question": "What is the CSS 'text-align' property used for?",
+        "options": [
+          "Setting the space between the border and content of an element",
+          "Aligning text within an element horizontally",
+          "Creating rounded corners for elements",
+          "Setting the font size"
+        ],
+        "category": "CSS",
+        "correctAnswer": 1,
+        "difficulty": "Easy"
+      },
+      {
+        "id": 71,
+        "question": "What is the CSS 'float' property used for, and how does it affect the layout of elements?",
+        "options": [
+          "The 'float' property is used to change the text color of an element.",
+          "The 'float' property is used to create rounded corners for elements.",
+          "The 'float' property is used to make an element float to the left or right of its parent element, affecting the layout by allowing other content to flow around it.",
+          "The 'float' property is used to align text within an element."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 72,
+        "question": "Explain the CSS 'position' property and its possible values. How does it impact the positioning of elements?",
+        "options": [
+          "The 'position' property is used to create animations in web development.",
+          "The 'position' property is used to define character encoding in HTML.",
+          "The 'position' property is used to control the positioning of elements. It can take values like 'static', 'relative', 'absolute', and 'fixed', affecting how elements are placed in the document flow.",
+          "The 'position' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 73,
+        "question": "What is the CSS 'display' property used for, and what are some common values for this property?",
+        "options": [
+          "The 'display' property is used for creating dropdown menus in web development.",
+          "The 'display' property is used to define character encoding in HTML.",
+          "The 'display' property is used to control how an element is displayed. Common values include 'block', 'inline', 'inline-block', and 'none'.",
+          "The 'display' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 74,
+        "question": "Explain the CSS 'box model' and its components, including margin, border, padding, and content.",
+        "options": [
+          "The 'box model' is a way to create animations in web development.",
+          "The 'box model' is used to define character encoding in HTML.",
+          "The 'box model' is a fundamental concept in CSS that describes the structure of an element as a box with four components: margin, border, padding, and content.",
+          "The 'box model' is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 75,
+        "question": "What is the purpose of the CSS 'z-index' property, and how is it used to control the stacking order of elements?",
+        "options": [
+          "The 'z-index' property is used for creating dropdown menus in web development.",
+          "The 'z-index' property is used to define character encoding in HTML.",
+          "The 'z-index' property is used to control the stacking order of elements in the document. Elements with a higher 'z-index' value are displayed on top of elements with lower values.",
+          "The 'z-index' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 76,
+        "question": "Explain the concept of CSS specificity and how it determines which styles are applied to an element when multiple conflicting styles exist.",
+        "options": [
+          "CSS specificity is used for creating animations in web development.",
+          "CSS specificity is a measure of how specific a selector is and determines which styles take precedence when conflicting styles are applied to an element. It follows a set of rules to calculate specificity values.",
+          "CSS specificity is used to define character encoding in HTML.",
+          "CSS specificity is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 1,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 77,
+        "question": "What is the CSS 'flexbox' layout model, and how does it simplify the layout of elements in a container?",
+        "options": [
+          "The 'flexbox' layout model is used for creating dropdown menus in web development.",
+          "The 'flexbox' layout model is used to define character encoding in HTML.",
+          "The 'flexbox' layout model is a CSS layout model that makes it easier to design and align items within a container, providing a more efficient and predictable way to distribute space and align content.",
+          "The 'flexbox' layout model is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 78,
+        "question": "Explain the CSS 'grid' layout model and how it simplifies the creation of grid-based layouts in web design.",
+        "options": [
+          "The 'grid' layout model is used for creating dropdown menus in web development.",
+          "The 'grid' layout model is used to define character encoding in HTML.",
+          "The 'grid' layout model is a CSS layout model that simplifies the creation of grid-based layouts, allowing designers to create complex grids with rows and columns for page layout.",
+          "The 'grid' layout model is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 79,
+        "question": "What is the CSS 'animation' property used for, and how can you create animations in CSS?",
+        "options": [
+          "The 'animation' property is used for defining character encoding in HTML.",
+          "The 'animation' property is used for creating dropdown menus in web development.",
+          "The 'animation' property is used to apply animations to elements in CSS. It allows you to define keyframes and specify the duration, timing function, and other animation properties.",
+          "The 'animation' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 80,
+        "question": "What are CSS pseudo-classes and how are they used to style elements based on their state or position?",
+        "options": [
+          "CSS pseudo-classes are used for creating dropdown menus in web development.",
+          "CSS pseudo-classes are used to define character encoding in HTML.",
+          "CSS pseudo-classes are used to select and style elements based on their state or position, such as :hover for mouse-over effects and :first-child for selecting the first child element.",
+          "CSS pseudo-classes are used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Medium"
+      },
+      {
+        "id": 81,
+        "question": "What is the CSS 'transform' property used for, and how can it be employed to apply 2D and 3D transformations to elements?",
+        "options": [
+          "The 'transform' property is used to define character encoding in HTML.",
+          "The 'transform' property is used to create dropdown menus in web development.",
+          "The 'transform' property is used to apply 2D and 3D transformations to elements, such as translations, rotations, and scaling, using CSS functions like translate, rotate, and scale.",
+          "The 'transform' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 82,
+        "question": "Explain the concept of CSS variables (custom properties) and how they are used to create reusable styles in CSS.",
+        "options": [
+          "CSS variables are used for creating dropdown menus in web development.",
+          "CSS variables are used to define character encoding in HTML.",
+          "CSS variables, also known as custom properties, allow you to define and reuse values in your CSS styles. They are prefixed with '--' and can be set on elements to make styles more maintainable and dynamic.",
+          "CSS variables are used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 83,
+        "question": "What is the CSS 'clip-path' property used for, and how can it be applied to create custom element shapes?",
+        "options": [
+          "The 'clip-path' property is used for creating dropdown menus in web development.",
+          "The 'clip-path' property is used to define character encoding in HTML.",
+          "The 'clip-path' property is used to create custom element shapes by clipping an element's visible area using various shape functions like polygon and circle.",
+          "The 'clip-path' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 84,
+        "question": "Explain the CSS 'masking' property and its role in creating complex visual effects, such as image masks and transparency.",
+        "options": [
+          "The 'masking' property is used for creating dropdown menus in web development.",
+          "The 'masking' property is used to define character encoding in HTML.",
+          "The 'masking' property is used to create complex visual effects, including image masks and transparency, by applying mask layers to elements.",
+          "The 'masking' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 85,
+        "question": "What are CSS blend modes, and how can they be used to combine and blend colors in web design?",
+        "options": [
+          "CSS blend modes are used for creating dropdown menus in web development.",
+          "CSS blend modes are used to define character encoding in HTML.",
+          "CSS blend modes are used to combine and blend colors in web design, allowing you to create various visual effects when elements overlap, such as overlay, multiply, and screen modes.",
+          "CSS blend modes are used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 86,
+        "question": "Explain the CSS 'perspective' and 'transform-style' properties and their role in creating 3D transformations and perspectives.",
+        "options": [
+          "The 'perspective' and 'transform-style' properties are used for creating dropdown menus in web development.",
+          "The 'perspective' and 'transform-style' properties are used to define character encoding in HTML.",
+          "The 'perspective' property defines the depth perspective for 3D transformations, and the 'transform-style' property determines whether child elements are transformed in 3D space. They play a key role in creating 3D transformations and perspectives in CSS.",
+          "The 'perspective' and 'transform-style' properties are used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 87,
+        "question": "Explain the CSS 'grid-template-areas' property and how it's used to create complex grid layouts with named grid areas.",
+        "options": [
+          "The 'grid-template-areas' property is used for creating dropdown menus in web development.",
+          "The 'grid-template-areas' property is used to define character encoding in HTML.",
+          "The 'grid-template-areas' property is used to create complex grid layouts with named grid areas, allowing you to visually design grid structures using area names.",
+          "The 'grid-template-areas' property is used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 88,
+        "question": "What are CSS counters and how are they used to automatically number and style elements in a document?",
+        "options": [
+          "CSS counters are used for creating dropdown menus in web development.",
+          "CSS counters are used to define character encoding in HTML.",
+          "CSS counters are used to automatically number and style elements in a document. They can be used to generate ordered or unordered lists and other numbered content.",
+          "CSS counters are used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 89,
+        "question": "Explain the concept of CSS 'grids' and their role in creating responsive grid layouts in web design.",
+        "options": [
+          "CSS grids are used for creating dropdown menus in web development.",
+          "CSS grids are used to define character encoding in HTML.",
+          "CSS grids are used to create responsive grid layouts in web design, providing a flexible and powerful way to arrange and align elements in a responsive web page.",
+          "CSS grids are used for defining font styles in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      },
+      {
+        "id": 90,
+        "question": "Explain the CSS 'filter' property and its use in manipulating visual effects and image enhancements in web design. Provide examples of common filter functions.",
+        "options": [
+          "The 'filter' property is used to adjust font sizes in CSS.",
+          "The 'filter' property is used for creating dropdown menus in web development.",
+          "The 'filter' property is used to apply visual effects and image enhancements to elements in web design. Common filter functions include 'blur', 'brightness', 'contrast', 'grayscale', 'sepia', and more.",
+          "The 'filter' property is used for defining character encoding in HTML documents."
+        ],
+        "category": "CSS",
+        "correctAnswer": 2,
+        "difficulty": "Hard"
+      }
+    ]
+  }
+  
