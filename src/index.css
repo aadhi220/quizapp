@@ -5,7 +5,10 @@
   scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Raleway', sans-serif; */
+  /* overflow: hidden */
+  
 }
+
 
 @tailwind base;
 @tailwind components;
