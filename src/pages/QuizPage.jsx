@@ -33,9 +33,9 @@ export default function QuizPage() {
                     //    handleOptions(optIndex, question.correctAnswer)
                     //  }
                     key={optIndex}
-                    className={`w-[48%] rounded-md  min-h-[3.5rem] flex place-items-center md:px-[1rem] border-[5px] bg-[#c8ff00] overflow-visible 
-               ${optIndex === question.correctAnswer && "bg-[green]"} ${
-                      optIndex != question.correctAnswer && "focus:bg-[red]"
+                    className={`w-[48%] rounded-md  min-h-[3.5rem] flex place-items-center md:px-[1rem] border-[3px]  overflow-visible 
+               ${optIndex === question.correctAnswer && "bg-[#36ec36]"} ${
+                      optIndex != question.correctAnswer && "focus:bg-[#ff0000]"
                     } shadow-2xl hover:shadow-2xl md:text-xl`}
                   >
                     {option}
@@ -46,7 +46,7 @@ export default function QuizPage() {
                       handleOptions(optIndex, question.correctAnswer)
                     }
                     key={optIndex}
-                    className={`w-[48%] rounded-md  min-h-[3.5rem] flex place-items-center md:px-[1rem] border-[5px] bg-[#c8ff00] overflow-visible shadow-2xl hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] md:text-xl`}
+                    className={`w-[48%] rounded-md  min-h-[3.5rem] flex place-items-center md:px-[1rem] border-[3px] bg-base-200 overflow-visible shadow-2xl hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] md:text-xl`}
                   >
                     {option}
                   </button>
@@ -57,7 +57,7 @@ export default function QuizPage() {
 
           <button
             onClick={() => skipQuestion()}
-            className="px-3 py-2 bg-[yellow] rounded-xl mt-[5rem] drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01]"
+            className=" btn rounded-xl btn-warning border-[3px] border-white mt-[5rem] drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01]"
           >
             {/* {selectedAnswer ? "Next" : "Skip"} */}
             Skip

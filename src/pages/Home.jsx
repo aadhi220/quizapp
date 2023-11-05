@@ -12,7 +12,7 @@ export default function Home() {
 
 
 
-<button onClick={()=>skipQuestion()} className='overflow-visible'> <button onClick={()=>setCorrect(0)} className='px-3 py-2 bg-[yellow] md:text-[1.5rem] rounded-lg  md:mt-[10rem] drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01]  '>lets get started</button> 
+<button onClick={()=>skipQuestion()} className='overflow-visible'> <button onClick={()=>setCorrect(0)} className='btn btn-base-content md:text-[1.5rem] rounded-lg  md:mt-[10rem] drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01]  '>lets get started</button> 
 </button>
         </div>
         <Dashboard/>

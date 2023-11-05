@@ -5,11 +5,13 @@ import './App.css';
 import Home from './pages/Home';
 import Header from './components/Header';
 import QuizPage from './pages/QuizPage';
+import { useGlobalContext } from './context';
 
 function App() {
+  const {darkMode} =useGlobalContext();
   return (
-    <div  data-theme="light">
-      <div  className="App bg-primary text-black">
+    <div  data-theme={`${darkMode ? "dark" : "cyberpunk"}`}>
+      <div  className="App bg-base-200 transition-all">
         <Header/>
      <Routes>
       <Route path={'/'} element={<Home/>}/>

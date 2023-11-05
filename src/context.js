@@ -11,6 +11,7 @@ const AppProvider = ({ children }) => {
   const [correct, setCorrect] = useState(0);
   const [selectedAnswer,setSelectedAnswer]=useState(0)
   const [error, setError] = useState(false);
+  const [darkMode,setDarkMode]=useState(false)
 
   const [quiz, setQuiz] = useState({
     amount: 10,
@@ -98,7 +99,9 @@ if(!selectedAnswer) {
         selectedAnswer,
         correct,
         setCorrect,
-        HandleCategory
+        HandleCategory,
+        darkMode,
+        setDarkMode
 
       }}
     >
