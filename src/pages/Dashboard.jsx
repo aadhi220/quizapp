@@ -13,7 +13,11 @@ export default function Dashboard() {
   // console.log(category);
   return (
     <>
-    
+      <div
+        id="dashboard"
+        className="w-[100%] h-[100%]   place-items-center place-content-center flex flex-col 
+ "
+      >
         <section id="category">
           <div className="w-[100%] h-[100vh]  place-items-center place-content-center flex flex-col pb-[10rem] md:pb-[3rem]">
             <span className="text-[2rem] md:text-[5rem] ">
@@ -39,7 +43,7 @@ export default function Dashboard() {
               <div
                 onClick={() => {
                   setCategory("HTML");
-                  skipQuestion();
+                  skipQuestion("difficulty");
                 }}
                 className="w-[10rem] h-[10rem] mt-4 flex flex-col place-items-center px-4 pt-4 drop-shadow-[0_35px_35px_rgba(0,0,0,0.50)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.90)] hover:scale-[1.01] rounded-2xl bg-info-content   "
               >
@@ -116,10 +120,10 @@ export default function Dashboard() {
           </div>
         </section>
 
-        <section id="quizPage" className="h-full w-full">
+        <section id="quizPage" className="h-full w-full snap-y snap-mandatory">
           <QuizPage />
         </section>
-     
+      </div>
     </>
   );
 }

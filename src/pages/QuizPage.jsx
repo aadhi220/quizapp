@@ -1,29 +1,17 @@
 import { useGlobalContext } from "../context";
 import ResultPage from "./ResultPage";
-import { useRef } from 'react';
 export default function QuizPage() {
   const { questions, skipQuestion, handleOptions, selectedAnswer, loading } =
     useGlobalContext();
-    const questionRefs = useRef(Array(questions.length).fill(null));
-    const scrollToNextQuestion = (currentIndex) => {
-      if (currentIndex < questions.length - 1) {
-        const nextQuestion = questionRefs[currentIndex + 1];
-        if (nextQuestion) {
-          nextQuestion.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
-      }
-    };
+
   return (
     <>
       {questions?.map((question, index) => (
         <div
           key={index}
           id={index}
-          ref={(el) => (questionRefs[index] = el)} // Add this line
-          className="h-[100vh] w-full flex flex-col place-content-center px-5 md:place-items-center  bg-[red]"
+          
+          className="h-[100vh] w-full flex flex-col place-content-center px-5 md:place-items-center "
         >
           <div className="w-[100%] md:w-[60%] overflow-visible">
             <span className="text-[2rem] md:text-[3rem]">{`${index + 1}/${
@@ -40,7 +28,7 @@ export default function QuizPage() {
                     //    handleOptions(optIndex, question.correctAnswer)
                     //  }
                     key={optIndex}
-                    className={`w-[100%] md:w-[48%]  rounded-md  min-h-[3.5rem] flex place-items-center px-1 py-1  md:px-[1rem] border-[3px]  overflow-visible 
+                    className={`w-[100%] md:[100%] xl:w-[48%]   rounded-md  min-h-[3.5rem] flex place-items-center text-center px-1 py-1  md:px-[1rem] border-[3px]  overflow-visible 
                ${optIndex === question.correctAnswer && "bg-[#36ec36]"} ${
                       optIndex !== question.correctAnswer &&
                       "focus:bg-[#ff0000]"
@@ -50,10 +38,9 @@ export default function QuizPage() {
                   </button>
                 ) : (
                   <button
-                  onClick={() => {
-                    handleOptions(optIndex, question.correctAnswer);
-                    scrollToNextQuestion(index); // Scroll to the next question
-                  }}
+                    onClick={() =>
+                      handleOptions(optIndex, question.correctAnswer,index+1)
+                    }
                     key={optIndex}
                     className={`w-[100%] md:[100%] xl:w-[48%]  rounded-md  min-h-[3.5rem] flex place-items-center text-center px-1 py-1 md:px-[1rem] border-[3px] bg-base-200 overflow-visible shadow-2xl hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] md:text-xl`}
                   >
@@ -65,7 +52,7 @@ export default function QuizPage() {
           </div>
 
           <button
-            onClick={() => skipQuestion()}
+            onClick={() => skipQuestion(index+1)}
             className=" btn rounded-xl btn-warning border-[3px] border-white mt-[5rem] drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01]"
           >
             {/* {selectedAnswer ? "Next" : "Skip"} */}
