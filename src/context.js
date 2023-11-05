@@ -1,87 +1,96 @@
 import React, { useState, useContext } from "react";
-import axios from "axios";
 import database from "./database/quiz.json";
 
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
-  const [waiting, setWaiting] = useState(true);
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [index, setIndex] = useState(0);
   const [correct, setCorrect] = useState(0);
-  const [selectedAnswer,setSelectedAnswer]=useState(0)
-  const [error, setError] = useState(false);
-  const [darkMode,setDarkMode]=useState(false)
-
-  const [quiz, setQuiz] = useState({
-    amount: 10,
-    category: "Code",
-    difficulty: "easy",
-  });
-
+  const [selectedAnswer, setSelectedAnswer] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
   const [category, setCategory] = useState("React");
   const [difficulty, setDifficulty] = useState("Easy");
+  const [progress, setProgress] = useState(false);
+  const [starts, setStarts] = useState(false);
 
   const startQuiz = () => {
-    // const filteredData = database.filter((data) => data.category === category && data.difficulty === difficulty);
-    // setQuestions(filteredData);
-  
+    // e.preventDefault()
+
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight,
+        behavior: "smooth",
+      });
+    }, 500);
+
+    setTimeout(() => {
+      setProgress(true);
+    }, 1500);
+
     // Scroll down 100vh
-    window.scrollTo({
-      top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
-      behavior: 'smooth', // Optional: You can use 'auto' for instant scrolling
-    });
   };
-  
-  const GetQuiz =(value)=>{
-    setDifficulty(value)
-    const filteredData = database.filter((data) => data.category === category && data.difficulty === difficulty);
+
+  const GetQuiz = (value) => {
+    // e.preventDefault();
+    setDifficulty(value);
+    const filteredData = database.filter(
+      (data) => data.category === category && data.difficulty === difficulty
+    );
     setQuestions(filteredData);
-  }
-  const skipQuestion =()=>{
-if(!selectedAnswer) {
-  window.scrollTo({
-    top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
-    behavior: 'smooth', // Optional: You can use 'auto' for instant scrolling
-  });
-}
-  }
+    setStarts(true);
+  };
+  const skipQuestion = () => {
+    if (!selectedAnswer) {
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+        behavior: "smooth",
+      });
+    }
+  };
 
   const handleOptions = (selected, correctAnswer) => {
-    
-    if(selected===correctAnswer) {
-      setCorrect(correct+1)
+    setLoading(true);
+    if (selected === correctAnswer) {
+      setCorrect(correct + 1);
     }
     setSelectedAnswer(true);
-     
-      
-      // Add a 1-second (1000 milliseconds) delay using setTimeout
-      setTimeout(() => {
-        setSelectedAnswer(false)
-        window.scrollTo({
-          top: window.scrollY + window.innerHeight,
-          behavior: 'smooth',
-        });
-      }, 500); // 1000 milliseconds = 1 second
-   
+
+    // Add a 1-second (1000 milliseconds) delay using setTimeout
+    setTimeout(() => {
+      setSelectedAnswer(false);
+      setLoading(false);
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight,
+        behavior: "smooth",
+      });
+    }, 500); // 1000 milliseconds = 1 second
   };
-  
-  const prevQuestion =()=> {
+
+  const prevQuestion = () => {
     window.scrollTo({
       top: window.scrollY - window.innerHeight, // Scrolls down by one viewport height
-      behavior: 'smooth', // Optional: You can use 'auto' for instant scrolling
+      behavior: "smooth",
     });
-  }
+  };
 
-  const HandleCategory=()=> {
-    
+  const handleCategory = (e, name) => {
+    e.preventDefault();
+    setCategory(name);
     window.scrollTo({
       top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
-      behavior: 'smooth', // Optional: You can use 'auto' for instant scrolling
+      behavior: "smooth",
     });
-  }
+  };
 
-  
+  const start = () => {
+    setCorrect(0);
+    window.scrollTo({
+      top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+      behavior: "smooth",
+    });
+  };
 
   return (
     <AppContext.Provider
@@ -99,10 +108,15 @@ if(!selectedAnswer) {
         selectedAnswer,
         correct,
         setCorrect,
-        HandleCategory,
+        handleCategory,
         darkMode,
-        setDarkMode
-
+        setDarkMode,
+        start,
+        loading,
+        progress,
+        setProgress,
+        setStarts,
+        starts,
       }}
     >
       {children}

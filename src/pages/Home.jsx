@@ -1,21 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Dashboard from './Dashboard'
+import React from "react";
+import Dashboard from "./Dashboard";
 import { useGlobalContext } from "../context";
 export default function Home() {
-  const {setCorrect,skipQuestion}=useGlobalContext();
+  const { start } = useGlobalContext();
   return (
-    <div  className='overflow-hidden'>
-        <div id='home' className="w-[100%] h-[100vh] bg-  place-items-center  flex flex-col overflow-hidden ">
-<h1 className='text-[3rem] md:text-[6rem] text-center md:mt-[16rem]  '>TechTrivia</h1>
-<p className=' md:text-[2rem]'>take a quick quiz to check your tech knowlodge</p>
+    <div className="overflow-hidden">
+      <div
+        id="home"
+        className="w-[100%] h-[100vh]   place-items-center  flex flex-col overflow-hidden px-2 "
+      >
+        <h1 className="text-[3rem] md:text-[6rem] text-center mt-[16rem]  md:mt-[16rem]  ">
+          TechTrivia
+        </h1>
+        <p className=" text-[1.5rem] mt-2 md:text-[2rem] text-center capitalize">
+          Unlock the Code to Your Knowledge - Test Your Tech IQ!
+        </p>
 
-
-
-<button onClick={()=>skipQuestion()} className='overflow-visible'> <button onClick={()=>setCorrect(0)} className='btn btn-base-content md:text-[1.5rem] rounded-lg  md:mt-[10rem] drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01]  '>lets get started</button> 
-</button>
-        </div>
-        <Dashboard/>
+        <button
+          onClick={() => start()}
+          className="btn btn-base-content md:text-[1.5rem] rounded-lg   drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] hover:scale-[1.01] overflow-visible mt-[10rem] md:mt-[10rem]  "
+        >
+          lets get started
+        </button>
+      </div>
+      <Dashboard />
     </div>
-  )
+  );
 }
