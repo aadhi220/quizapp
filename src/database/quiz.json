@@ -1,5 +1,4 @@
-{
-    "questions": [
+  [
       {
         "id": 1,
         "question": "What is React?",
@@ -394,7 +393,7 @@
         "id": 31,
         "question": "What does HTML stand for?",
         "options": [
-          "Hypertext Transfer Language",
+          "Hyper Text Markup Language",
           "Hyperlink and Text Markup Language",
           "Highly Technical Modern Language",
           "Home Tool Markup Language"
@@ -1171,5 +1170,5 @@
         "difficulty": "Hard"
       }
     ]
-  }
+  
   

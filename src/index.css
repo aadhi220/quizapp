@@ -2,10 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Raleway', sans-serif; */
-  /* overflow: hidden */
+   overflow: hidden
   
 }
 
