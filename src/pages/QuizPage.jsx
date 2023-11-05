@@ -10,7 +10,7 @@ export default function QuizPage() {
         <div
           key={index}
           id={index}
-          className="h-[100vh] w-full flex flex-col place-content-center px-5 md:place-items-center snap-center "
+          className="h-[100vh] w-full flex flex-col place-content-center px-5 md:place-items-center  "
         >
           <div className="w-[100%] md:w-[60%] overflow-visible">
             <span className="text-[2rem] md:text-[3rem]">{`${index + 1}/${

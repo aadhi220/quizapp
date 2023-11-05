@@ -2,12 +2,14 @@ import React from "react";
 import Dashboard from "./Dashboard";
 import { useGlobalContext } from "../context";
 export default function Home() {
+
   const { start } = useGlobalContext();
   return (
-    <div className="overflow-hidden">
+    <>
       <div
         id="home"
         className="w-[100%] h-[100vh]   place-items-center  flex flex-col overflow-hidden px-2 "
+        
       >
         <h1 className="text-[3rem] md:text-[6rem] text-center mt-[16rem]  md:mt-[16rem]  ">
           TechTrivia
@@ -24,6 +26,6 @@ export default function Home() {
         </button>
       </div>
       <Dashboard />
-    </div>
+    </>
   );
 }

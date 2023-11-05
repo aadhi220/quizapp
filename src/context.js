@@ -22,6 +22,7 @@ const AppProvider = ({ children }) => {
       window.scrollTo({
         top: window.scrollY + window.innerHeight,
         behavior: "smooth",
+        block:"start",
       });
     }, 500);
 
@@ -46,6 +47,7 @@ const AppProvider = ({ children }) => {
       window.scrollTo({
         top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
         behavior: "smooth",
+        block:"start",
       });
     }
   };
@@ -64,6 +66,7 @@ const AppProvider = ({ children }) => {
       window.scrollTo({
         top: window.scrollY + window.innerHeight,
         behavior: "smooth",
+        block:"start",
       });
     }, 500); // 1000 milliseconds = 1 second
   };
@@ -81,6 +84,7 @@ const AppProvider = ({ children }) => {
     window.scrollTo({
       top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
       behavior: "smooth",
+      block:"start",
     });
   };
 
@@ -89,6 +93,7 @@ const AppProvider = ({ children }) => {
     window.scrollTo({
       top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
       behavior: "smooth",
+      block:"start",
     });
   };
 

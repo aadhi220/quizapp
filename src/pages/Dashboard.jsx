@@ -13,11 +13,7 @@ export default function Dashboard() {
   // console.log(category);
   return (
     <>
-      <div
-        id="dashboard"
-        className="w-[100%] h-[100%]   place-items-center place-content-center flex flex-col 
- "
-      >
+    
         <section id="category">
           <div className="w-[100%] h-[100vh]  place-items-center place-content-center flex flex-col pb-[10rem] md:pb-[3rem]">
             <span className="text-[2rem] md:text-[5rem] ">
@@ -120,10 +116,10 @@ export default function Dashboard() {
           </div>
         </section>
 
-        <section id="quizPage" className="h-full w-full snap-y snap-mandatory">
+        <section id="quizPage" className="h-full w-full">
           <QuizPage />
         </section>
-      </div>
+     
     </>
   );
 }
