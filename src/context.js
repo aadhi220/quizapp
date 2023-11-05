@@ -1,11 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 
-const table = {
-  sports: 21,
-  history: 23,
-  politics: 24,
-};
+const table = ["Code","DevOps","Linux","SQL","docker"];
 
 // const API_ENDPOINT = "https://opentdb.com/api.php?";
 
@@ -20,25 +16,21 @@ const AppProvider = ({ children }) => {
   const [error, setError] = useState(false);
   const [quiz, setQuiz] = useState({
     amount: 10,
-    category: "sports",
+    category: "Code",
     difficulty: "easy",
   });
   const [isModalOpen, setModalOpen] = useState(false);
   const fetchQuestions = async () => {
-    const apiKey = '6QB98ZWk2B682Y1wqntPGJNS1fSb7x457ByvjodV';
+ 
     
-const url = 'https://quizapi.io/api/v1/questions';
+const url = '/quiz.json';
     setLoading(true);
     setWaiting(false);
-    const response = await axios(url,{params:{
-        apiKey:apiKey,
-        limit:10,
-        category:"linux",
-        difficulty:"easy"
-    }}).catch((err) => console.log(err));
+    const response = await axios(url).catch((err) => console.log(err));
     if (response) {
       const data = response.data;
-    console.log(response);
+      console.log(response);
+   
       if (data) {
         setQuestions(data);
         setWaiting(false);
