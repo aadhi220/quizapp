@@ -1,17 +1,22 @@
+import { Route, Routes } from "react-router-dom";
 
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import "./App.css";
 
-import Home from './pages/Home';
-import Header from './components/Header';
+import Home from "./pages/Home";
+import Header from "./components/Header";
+
+import { useGlobalContext } from "./context";
 
 function App() {
+  const { darkMode } = useGlobalContext();
   return (
-    <div  className="App bg-green-400 ">
-      <Header/>
-   <Routes>
-    <Route path={'/'} element={<Home/>}/>
-   </Routes>
+    <div data-theme={`${darkMode ? "dark" : "cyberpunk"}`}>
+      <div className="App bg-base-200 transition-all">
+        <Header />
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+        </Routes>
+      </div>
     </div>
   );
 }

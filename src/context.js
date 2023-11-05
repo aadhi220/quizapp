@@ -1,121 +1,131 @@
 import React, { useState, useContext } from "react";
-import axios from "axios";
-
-const table = {
-  sports: 21,
-  history: 23,
-  politics: 24,
-};
-
-// const API_ENDPOINT = "https://opentdb.com/api.php?";
-
+import database from "./database/quiz.json";
 
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
-  const [waiting, setWaiting] = useState(true);
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [index, setIndex] = useState(0);
   const [correct, setCorrect] = useState(0);
-  const [error, setError] = useState(false);
-  const [quiz, setQuiz] = useState({
-    amount: 10,
-    category: "sports",
-    difficulty: "easy",
-  });
-  const [isModalOpen, setModalOpen] = useState(false);
-  const fetchQuestions = async () => {
-    const apiKey = '6QB98ZWk2B682Y1wqntPGJNS1fSb7x457ByvjodV';
-    
-const url = 'https://quizapi.io/api/v1/questions';
+  const [selectedAnswer, setSelectedAnswer] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
+  const [category, setCategory] = useState("React");
+  const [difficulty, setDifficulty] = useState("Easy");
+  const [progress, setProgress] = useState(false);
+  const [starts, setStarts] = useState(false);
+
+  const startQuiz = () => {
+    // e.preventDefault()
+
     setLoading(true);
-    setWaiting(false);
-    const response = await axios(url,{params:{
-        apiKey:apiKey,
-        limit:10,
-        category:"linux",
-        difficulty:"easy"
-    }}).catch((err) => console.log(err));
-    if (response) {
-      const data = response.data;
-    console.log(response);
-      if (data) {
-        setQuestions(data);
-        setWaiting(false);
-        setLoading(false);
-        setError(false);
-      } else {
-        setWaiting(true);
-        setError(true);
-      }
-    } else {
-      setWaiting(true);
-     }
+    setTimeout(() => {
+      setLoading(false);
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight,
+        behavior: "smooth",
+      });
+    }, 500);
+
+    setTimeout(() => {
+      setProgress(true);
+    }, 1500);
+
+    // Scroll down 100vh
   };
-  const nextQuestion = () => {
-    setIndex((oldIndex) => {
-      const index = oldIndex + 1;
-      if (index > questions.length - 1) {
-        openModal();
-        return 0;
-      } else {
-        return index;
-      }
+
+  const GetQuiz = (value) => {
+    // e.preventDefault();
+    setDifficulty(value);
+    const filteredData = database.filter(
+      (data) => data.category === category && data.difficulty === difficulty
+    );
+    setQuestions(filteredData);
+    setStarts(true);
+  };
+  const skipQuestion = () => {
+    if (!selectedAnswer) {
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleOptions = (selected, correctAnswer) => {
+    setLoading(true);
+    if (selected === correctAnswer) {
+      setCorrect(correct + 1);
+    }
+    setSelectedAnswer(true);
+
+    // Add a 1-second (1000 milliseconds) delay using setTimeout
+    setTimeout(() => {
+      setSelectedAnswer(false);
+      setLoading(false);
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight,
+        behavior: "smooth",
+      });
+    }, 500); // 1000 milliseconds = 1 second
+  };
+
+  const prevQuestion = () => {
+    window.scrollTo({
+      top: window.scrollY - window.innerHeight, // Scrolls down by one viewport height
+      behavior: "smooth",
     });
   };
 
-  const openModal = () => {
-
-  }
-
-  const checkAnswer = (value)=> {
-    if(value) {
-        setCorrect((oldState)=>oldState+1);
-
-    }
-    nextQuestion();
-
-  }
-
-  const handleChange = (e)=> {
-    const {name,value}=e.target;
-    setQuiz({...quiz, [name] : value});
+  const handleCategory = (e, name) => {
+    e.preventDefault();
+    setCategory(name);
+    window.scrollTo({
+      top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+      behavior: "smooth",
+    });
   };
-//   const handleSubmit =(e)=> {
-//     e.preventDefult();
-//     const {amount,category,difficulty}=quiz;
-//     const url=` ${API_ENDPOINT}amount=${amount}&category=${table[category]}&difficulty=${difficulty}&type=multiple`;
-//     fetch(url)
-//   }
+
+  const start = () => {
+    setCorrect(0);
+    window.scrollTo({
+      top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <AppContext.Provider value={{
-        waiting,
-        loading,
+    <AppContext.Provider
+      value={{
+        startQuiz,
+        category,
+        setCategory,
+        difficulty,
+        setDifficulty,
         questions,
-        index,
+        GetQuiz,
+        skipQuestion,
+        handleOptions,
+        prevQuestion,
+        selectedAnswer,
         correct,
-        error,
-        nextQuestion,
-        checkAnswer,
-        quiz,
-        handleChange,
-        // handleSubmit,
-        fetchQuestions
-
-    }}
+        setCorrect,
+        handleCategory,
+        darkMode,
+        setDarkMode,
+        start,
+        loading,
+        progress,
+        setProgress,
+        setStarts,
+        starts,
+      }}
     >
- {children}
-
+      {children}
     </AppContext.Provider>
-   
-  )
-
+  );
 };
 
-export const useGlobalContext = ()=> {
-    return useContext(AppContext);
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+};
 
-}
-
-export {AppContext,AppProvider};
+export { AppContext, AppProvider };
