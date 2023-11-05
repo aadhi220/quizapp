@@ -63,11 +63,11 @@ const AppProvider = ({ children }) => {
     setTimeout(() => {
       setSelectedAnswer(false);
       setLoading(false);
-      window.scrollTo({
-        top: window.scrollY + window.innerHeight,
-        behavior: "smooth",
-        block:"start",
-      });
+      // window.scrollTo({
+      //   top: window.scrollY + window.innerHeight,
+      //   behavior: "smooth",
+      //   block:"start",
+      // });
     }, 500); // 1000 milliseconds = 1 second
   };
 
