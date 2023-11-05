@@ -28,7 +28,7 @@ export default function ResultPage() {
   };
 
   return (
-    <div className="h-[100vh] w-full flex place-content-center place-items-center">
+    <div id="10" className="h-[100vh] w-full flex place-content-center place-items-center">
       <div className="h-[80%] w-[80%] backdrop-blur-xl bg-white/30 rounded-3xl px-5 flex flex-col place-content-evenly place-items-center">
         <div
           className="radial-progress bg-primary text-primary-content border-4 border-primary scale-105"

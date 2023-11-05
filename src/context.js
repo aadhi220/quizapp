@@ -22,6 +22,7 @@ const AppProvider = ({ children }) => {
       window.scrollTo({
         top: window.scrollY + window.innerHeight,
         behavior: "smooth",
+        block:"start",
       });
     }, 500);
 
@@ -41,16 +42,22 @@ const AppProvider = ({ children }) => {
     setQuestions(filteredData);
     setStarts(true);
   };
-  const skipQuestion = () => {
+  const skipQuestion = (ids) => {
     if (!selectedAnswer) {
-      window.scrollTo({
-        top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
-        behavior: "smooth",
-      });
+      // window.scrollTo({
+      //   top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+      //   behavior: "smooth",
+      //   block:"start",
+      // });
+
+      const redElement = document.getElementById(ids);
+    if (redElement) {
+      redElement.scrollIntoView({ behavior: 'smooth' });
+    }
     }
   };
 
-  const handleOptions = (selected, correctAnswer) => {
+  const handleOptions = (selected, correctAnswer,idd) => {
     setLoading(true);
     if (selected === correctAnswer) {
       setCorrect(correct + 1);
@@ -61,10 +68,15 @@ const AppProvider = ({ children }) => {
     setTimeout(() => {
       setSelectedAnswer(false);
       setLoading(false);
-      window.scrollTo({
-        top: window.scrollY + window.innerHeight,
-        behavior: "smooth",
-      });
+      // window.scrollTo({
+      //   top: window.scrollY + window.innerHeight,
+      //   behavior: "smooth",
+      //   block:"start",
+      // });
+      const redElement = document.getElementById(idd);
+      if (redElement) {
+        redElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }, 500); // 1000 milliseconds = 1 second
   };
 
@@ -81,15 +93,22 @@ const AppProvider = ({ children }) => {
     window.scrollTo({
       top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
       behavior: "smooth",
+      block:"start",
     });
   };
 
   const start = () => {
     setCorrect(0);
-    window.scrollTo({
-      top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
-      behavior: "smooth",
-    });
+    // window.scrollTo({
+    //   top: window.scrollY + window.innerHeight, // Scrolls down by one viewport height
+    //   behavior: "smooth",
+    //   block:"start",
+    // });
+
+    const redElement = document.getElementById('dashboard');
+    if (redElement) {
+      redElement.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
