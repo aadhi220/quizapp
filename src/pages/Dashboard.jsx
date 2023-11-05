@@ -28,7 +28,7 @@ export default function Dashboard() {
               <div
                 onClick={() => {
                   setCategory("React");
-                  skipQuestion();
+                  skipQuestion("difficulty");
                 }}
                 className="w-[10rem] h-[10rem] mt-4 flex flex-col  place-items-center px-4 pt-4 drop-shadow-[0_35px_35px_rgba(0,0,0,0.50)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.90)] hover:scale-[1.01] rounded-2xl bg-info-content   "
               >
@@ -57,7 +57,7 @@ export default function Dashboard() {
               <div
                 onClick={() => {
                   setCategory("CSS");
-                  skipQuestion();
+                  skipQuestion("difficulty");
                 }}
                 className="w-[10rem] h-[10rem] mt-4 flex flex-col place-items-center px-4 pt-4  drop-shadow-[0_35px_35px_rgba(0,0,0,0.50)] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.90)] hover:scale-[1.01] rounded-2xl bg-info-content "
               >
